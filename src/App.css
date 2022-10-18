@@ -1,38 +1,153 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*** Header ***/
+.header-wrapper {
+  height: 300px;
+  background-image: url('images/calculator.png');
+  background-repeat: no-repeat;
+  background-size: 300px 150px;
+  background-position: bottom 25px right 25px;
+}
+
+.header-wrapper h1 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.header-wrapper .total {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.income-total,
+.expenses-total {
+  padding: 12px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.income-total {
+  margin-bottom: 10px;
+  background-color: #2b579a;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.expenses-total {
+  color: #fff;
+  border-radius: 5px;
+}
+
+.income-total .income-title,
+.expenses-total .expenses-title{
+  font-size: 12px;
+}
+
+.income-value,
+.expenses-value {
+  letter-spacing: 1px;
+  float: left;
+}
+
+.income-percentage,
+.expenses-percentage {
+  float: left;
+  width: 35px;
+  font-size: 12px;
+  padding: 3px 0;
+  margin-left: 10px;
+}
+
+.expenses-percentage {
+  background-color: rgba(255, 255, 255, 0.2);
   text-align: center;
+  border-radius: 3px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*** Input form ***/
+
+.input-form > div {
+  margin: 0 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.type-of-desc {
+  width: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add-btn {
+  font-size: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/*** All Display ***/
+
+h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.list-group-item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.list-group-item:nth-child(even) {
+  background-color: #f7f7f7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.list-group-item:first-child{
+  border-top: 1px solid #e7e7e7;
+}
+
+.list-group-item:last-child {
+  border-bottom: 1px solid #e7e7e7 !important;
+}
+
+.exp .expenses-percentage {
+  background-color: #fa6f6b;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  width: 35px;
+  font-size: 12px;
+  padding: 3px 0;
+  margin-left: 10px;
+}
+
+.delete-btn {
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  display: none;
+}
+
+.list-group-item:hover .delete-btn{
+  display: inline-block;
+}
+
+/* Extra small devices (phones, 575px and down) */
+@media only screen and (max-width: 575px) {
+  .header-wrapper h1 {
+    font-size: 1.25rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header-wrapper .total {
+    font-size: 2.5rem;
+  }
+
+  .type-setter, .add-btn-setter {
+    display: flex;
+    justify-content: center ;
   }
 }
