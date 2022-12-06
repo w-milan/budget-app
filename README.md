@@ -1,6 +1,4 @@
-# Budget App 
-
-## Preview
+# Preview
 https://velvety-puffpuff-ea3faa.netlify.app
 
 1) Clone repository
